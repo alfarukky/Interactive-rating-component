@@ -1,6 +1,5 @@
 const submitBtn = document.getElementById("submit-btn");
 const ratingBtns = document.querySelectorAll(".rating-btn");
-const ratingCard = document.getElementById("ratingCard");
 const popupCard = document.getElementById("card-popup");
 const score = document.getElementById("score");
 let star_score = null;
