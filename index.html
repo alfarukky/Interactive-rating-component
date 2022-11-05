@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rating-card" id="rating-card">
+        <img
+          class="rating-card__like"
+          src="images/icon-star.svg"
+          alt="star icon"
+        />
+        <div class="rating-card__header">How did we do?</div>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="rating-card__select-btn" id="select-btn">
+          <span class="rating-btn">1</span>
+          <span class="rating-btn">2</span>
+          <span class="rating-btn">3</span>
+          <span class="rating-btn">4</span>
+          <span class="rating-btn">5</span>
+        </div>
+        <button class="btn rating-card__submit-btn" id="submit-btn">
+          Submit
+        </button>
+      </div>
+      <div class="card-popup" id="card-popup">
+        <img
+          src="images/illustration-thank-you.svg"
+          alt="thank you image"
+          class="card-popup__img"
+        />
+        <div class="card-popup__text">
+          You selected <span id="score"></span> out of 5
+        </div>
+        <div class="card-popup__header">Thank you!</div>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

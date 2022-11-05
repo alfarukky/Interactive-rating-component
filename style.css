@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-orange: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-grey: hsl(217, 12%, 63%);
+  --color-medium-grey: hsl(216, 12%, 54%);
+  --color-dark-blue: hsl(213, 19%, 18%);
+  --color-darker-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--color-darker-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+}
+.rating-card,
+.card-popup {
+  background-color: var(--color-dark-blue);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 40rem));
+  padding: 2.8rem;
+  max-width: 35rem;
+  width: 90vw;
+  border-radius: 1.5rem;
+}
+
+@media (min-height: 1440px) {
+  body {
+    font-size: 1.7rem;
+  }
+  .rating-card__select-btn .rating-btn {
+    padding: 1rem 1.7rem;
+  }
+}
+.rating-card {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 2rem;
+}
+
+.rating-card__like {
+  background-color: inherit;
+  padding: 1.4rem;
+  text-align: center;
+}
+.rating-card__like,
+.rating-card__select-btn span {
+  border-radius: 50%;
+  filter: brightness(1.4);
+}
+
+.rating-card__header,
+.card-popup__header {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+p {
+  color: var(--color-medium-grey);
+}
+
+.rating-card p {
+  line-height: 1.4;
+  word-spacing: 2px;
+}
+
+.rating-card__select-btn {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-medium-grey);
+}
+
+.rating-card__select-btn .rating-btn {
+  display: inline-block;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-dark-blue);
+  padding: 1rem 1.5rem;
+  transition: all 0.2s;
+}
+
+.rating-card__select-btn span:hover {
+  cursor: pointer;
+  background-color: var(--color-orange);
+}
+.rating-card__select-btn .selected {
+  background-color: var(--color-light-grey);
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  color: var(--color-white);
+  border: 0;
+  border-radius: 2rem;
+}
+.rating-card__submit-btn {
+  padding: 1.5rem 4rem;
+  background-color: var(--color-orange);
+  transition: all 0.2s;
+}
+.rating-card__submit-btn:hover {
+  color: var(--color-orange);
+  background-color: var(--color-white);
+}
+
+.card-popup {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+.card-popup > * {
+  margin-bottom: 1.5rem;
+}
+
+.card-popup p {
+  line-height: 1.6;
+}
+
+.card-popup__text {
+  display: inline-block;
+  color: var(--color-orange);
+  background-color: inherit;
+  filter: brightness(1.4);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
